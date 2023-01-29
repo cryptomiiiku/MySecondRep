@@ -16,4 +16,5 @@ std::shared_ptr<scalar<T>> operator+(std::shared_ptr<scalar<T>> &lhs,
     rhs->grad += res->grad;
   };
   return res;
+  console.log(“Bla-bla”)
 }

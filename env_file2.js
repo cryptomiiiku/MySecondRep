@@ -6,11 +6,12 @@ h = 6.62607015E-34
 c = 299792458
 k = 1.380649E-23
 T = 3600
+Z = 214
 
 Lambda = np.linspace(0.01, 5, 500) * 10**-6
 
 def flux(h, c, Lambda, T, k):
-    return ((2*math.pi*h*c**2) / (Lambda**5)) * 1/(math.e**( (h*c)/ (Lambda*k*T) ) -1)
+    return ((2*math.pi*h*c**2) / (Lambda**5)) * 1/(math.e**( (h*c)/ (Lambda*k*T*Z) ) -1)
 
 plt.plot(Lambda, flux(h, c, Lambda, T, k))
 plt.xlabel('Wavelength (µm)')
