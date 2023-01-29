@@ -1,0 +1,19 @@
+<plugin>
+        <groupId>io.github.berkleytechnologyservices</groupId>
+            <artifactId>restdocs-spec-maven-plugin</artifactId>
+            <version>${restdocs-spec.version}</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                    <configuration>
+                        <!--suppress MavenModelInspection -->
+                        <skip>${skipTests}</skip>
+                        <host>localhost:8081</host>
+                        <specification>OPENAPI_V3</specification>
+                        <outputDirectory>${project.build.directory}/classes/static/docs</outputDirectory>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
